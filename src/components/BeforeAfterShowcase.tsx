@@ -50,7 +50,7 @@ const BeforeAfterShowcase = () => {
     const [emblaRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })]);
 
     return (
-        <section className="pt-12 pb-24 bg-gradient-soft relative overflow-hidden">
+        <section className="pt-4 pb-24 bg-gradient-soft relative overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4 scroll-reveal">
@@ -58,11 +58,10 @@ const BeforeAfterShowcase = () => {
                         <span className="text-xs font-semibold text-accent uppercase tracking-wider">Resultados Comprovados</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-4xl mx-auto leading-tight">
-                        Transforme Seu Sorriso, <br />
-                        <span className="text-primary">Transforme Sua Vida</span>
+                        Veja o Antes e Depois dos Clientes
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Tecnologia avançada e especialistas dedicados para resultados estéticos surpreendentes e duradouros.
+                        Tratamento bem elaborado para resultados incríveis
                     </p>
                 </div>
 
