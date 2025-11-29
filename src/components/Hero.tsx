@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Check, Phone, Star } from "lucide-react";
 import heroImage from "@/assets/hero-smile.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-soft -z-10" />
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <img 
+          src={heroBackground} 
+          alt="Clínica odontológica moderna"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-background/80" />
+      </div>
       
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
