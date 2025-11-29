@@ -40,28 +40,29 @@ const StaticComparisonCard = ({ image, title, desc }: { image: string, title: st
             <div className="p-6 text-center space-y-2">
                 <h3 className="font-serif text-xl font-bold text-foreground group-hover:text-primary transition-colors">{title}</h3>
                 <p className="text-sm text-muted-foreground">{desc}</p>
+                <p className="text-xs text-muted-foreground/60 italic pt-2">Resultado obtido em 3 sessões</p>
             </div>
         </div>
     );
 };
 
 const BeforeAfterShowcase = () => {
-    const [emblaRef] = useEmblaCarousel({ loop: true, align: "start", direction: "rtl" }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
+    const [emblaRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })]);
 
     return (
-        <section className="py-24 bg-gradient-soft relative overflow-hidden">
+        <section className="pt-12 pb-24 bg-gradient-soft relative overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4 scroll-reveal">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 w-fit mx-auto">
-                        <span className="text-xs font-semibold text-accent uppercase tracking-wider">Resultados Extraordinários</span>
+                        <span className="text-xs font-semibold text-accent uppercase tracking-wider">Resultados Comprovados</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-4xl mx-auto leading-tight">
-                        Sua Nova Versão Começa <br />
-                        <span className="text-primary">Pelo Seu Sorriso</span>
+                        Transforme Seu Sorriso, <br />
+                        <span className="text-primary">Transforme Sua Vida</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Veja como a união entre arte e tecnologia pode rejuvenescer sua aparência e devolver sua autoconfiança em poucos dias.
+                        Tecnologia avançada e especialistas dedicados para resultados estéticos surpreendentes e duradouros.
                     </p>
                 </div>
 
