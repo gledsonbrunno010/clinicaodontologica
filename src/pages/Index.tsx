@@ -6,13 +6,17 @@ import Specialties from "@/components/Specialties";
 import WhyChoose from "@/components/WhyChoose";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
+import SocialProof from "@/components/SocialProof";
 import Doctor from "@/components/Doctor";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
+import SEO from "@/components/SEO";
+
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEO />
       <Header />
       <main>
         <Hero />
@@ -21,7 +25,7 @@ const Index = () => {
         <Specialties />
         <WhyChoose />
         <Process />
-        <Testimonials />
+        <SocialProof />
         <Doctor />
         <FinalCTA />
       </main>

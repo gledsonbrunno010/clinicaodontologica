@@ -1,4 +1,4 @@
-import { Sparkles, Gem, Smile, Zap } from "lucide-react";
+import { Sparkles, Gem, Smile, Zap, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import veneerImage from "@/assets/veneers-detail.jpg";
 
@@ -35,7 +35,9 @@ const Specialties = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-champagne rounded-full blur-3xl opacity-20 -z-10" />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 scroll-reveal">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider">Especialidades de Alta Performance</p>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 w-fit mx-auto">
+            <span className="text-xs font-semibold text-accent uppercase tracking-wider">Especialidades de Alta Performance</span>
+          </div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-3xl mx-auto">
             Reabilitação estética{" "}
             <span className="bg-gradient-to-r from-primary to-graphite bg-clip-text text-transparent">integrada</span>
@@ -44,12 +46,12 @@ const Specialties = () => {
             Protocolos clínicos avançados com tecnologia CAD/CAM e resultados cientificamente validados
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {specialties.map((specialty, index) => (
-            <Card 
-              key={index} 
-              className="border-2 hover-lift group cursor-pointer bg-gradient-to-br from-white to-secondary/20 hover:border-accent/30 overflow-hidden"
+            <Card
+              key={index}
+              className="glass-card border-2 hover-lift group cursor-pointer overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 space-y-6 relative">
@@ -75,24 +77,30 @@ const Specialties = () => {
                     </div>
                   </div>
                 </div>
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
+                  <ArrowRight className="w-5 h-5 text-primary" />
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
-        
+
         {/* Featured image */}
         <div className="relative rounded-3xl overflow-hidden shadow-strong max-w-4xl mx-auto group cursor-pointer hover-lift">
           <div className="overflow-hidden rounded-3xl">
-            <img 
-              src={veneerImage} 
+            <img
+              src={veneerImage}
               alt="Procedimento de facetas e lentes de contato dental"
               className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 to-transparent flex items-end p-8 group-hover:from-graphite/90 transition-colors">
-            <p className="text-white text-lg font-semibold tracking-wide">
-              Precisão cirúrgica aliada à estética facial avançada
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/40 to-transparent flex items-end p-8 group-hover:from-graphite/95 transition-colors">
+            <div className="space-y-2">
+              <p className="text-accent font-medium tracking-wide text-sm">TECNOLOGIA DE PONTA</p>
+              <p className="text-white text-2xl font-serif font-semibold tracking-wide max-w-xl">
+                Precisão cirúrgica aliada à estética facial avançada para resultados que transformam vidas.
+              </p>
+            </div>
           </div>
         </div>
       </div>
