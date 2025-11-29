@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Check, Phone, Star } from "lucide-react";
 import heroImage from "@/assets/hero-smile.jpg";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/clinic-interior.jpg";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           alt="Clínica odontológica moderna"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/90 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
       </div>
       
       <div className="container mx-auto px-4 py-20">
