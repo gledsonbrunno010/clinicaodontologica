@@ -27,13 +27,11 @@ const Testimonials = () => {
     <section id="depoimentos" className="py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <p className="text-sm font-semibold text-accent uppercase tracking-wider">Depoimentos</p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            Histórias reais de{" "}
-            <span className="text-primary">transformação</span>
+            Depoimentos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A confiança dos nossos pacientes é nossa maior conquista
+            Comentários dos nossos clientes
           </p>
         </div>
         
