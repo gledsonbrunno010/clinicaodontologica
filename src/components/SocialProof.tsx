@@ -38,9 +38,11 @@ const SocialProof = () => {
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">Histórias Reais</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
-                        O impacto de um <br />
-                        <span className="text-primary">novo sorriso</span>
+                        Depoimentos dos Clientes
                     </h2>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Provas Reais dos nossos clientes fiéis
+                    </p>
                 </div>
 
                 {/* Testimonials Carousel */}
