@@ -31,7 +31,7 @@ const Specialties = () => {
   ];
 
   return (
-    <section id="especialidades" className="pt-8 pb-24 bg-gradient-soft relative overflow-hidden">
+    <section id="especialidades" className="pt-0 pb-24 bg-gradient-soft relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-champagne rounded-full blur-3xl opacity-20 -z-10" />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 scroll-reveal">

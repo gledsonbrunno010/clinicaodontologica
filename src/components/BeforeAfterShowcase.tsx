@@ -50,7 +50,7 @@ const BeforeAfterShowcase = () => {
     const [emblaRef] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })]);
 
     return (
-        <section className="pt-4 pb-24 bg-gradient-soft relative overflow-hidden">
+        <section id="trabalhos" className="pt-4 pb-24 bg-gradient-soft relative overflow-hidden">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4 scroll-reveal">
