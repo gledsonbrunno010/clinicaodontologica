@@ -39,11 +39,10 @@ const Specialties = () => {
             <span className="text-xs font-semibold text-accent uppercase tracking-wider">Especialidades de Alta Performance</span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-3xl mx-auto">
-            Reabilitação estética{" "}
-            <span className="bg-gradient-to-r from-primary to-graphite bg-clip-text text-transparent">integrada</span>
+            Tipos de Serviços que Prestamos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Protocolos clínicos avançados com tecnologia CAD/CAM e resultados cientificamente validados
+            Trabalhos bem elaborados e com Excelência e Qualidade
           </p>
         </div>
 

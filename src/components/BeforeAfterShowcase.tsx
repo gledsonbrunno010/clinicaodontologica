@@ -58,10 +58,10 @@ const BeforeAfterShowcase = () => {
                         <span className="text-xs font-semibold text-accent uppercase tracking-wider">Resultados Comprovados</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground max-w-4xl mx-auto leading-tight">
-                        Antes e Depois dos Clientes
+                        Antes e Depois dos Nossos Clientes
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Tratamento bem elaborado para resultados incríveis
+                        Resultados reais em pouco tempo de tratamento
                     </p>
                 </div>
 
