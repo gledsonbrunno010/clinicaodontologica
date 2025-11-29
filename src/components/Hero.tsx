@@ -18,21 +18,21 @@ const Hero = () => {
             </div>
             
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight text-balance">
-              Transforme seu sorriso com{" "}
-              <span className="text-primary">elegância e precisão</span>
+              Redefina seu sorriso com{" "}
+              <span className="bg-gradient-to-r from-primary to-graphite bg-clip-text text-transparent">precisão cirúrgica</span>
             </h1>
             
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Especialistas em estética dental premium. Lentes de contato, facetas e implantes com tecnologia avançada e atendimento humanizado.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Especialização avançada em estética facial integrada. Técnicas minimamente invasivas, planejamento digital 3D e protocolos internacionais de excelência.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-premium hover:opacity-90 transition-all shadow-medium text-base">
-                <Phone className="w-5 h-5 mr-2" />
-                Agendar Avaliação Gratuita
+              <Button size="lg" variant="premium" className="group shadow-strong">
+                <Phone className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Agendar Avaliação Especializada
               </Button>
-              <Button size="lg" variant="outline" className="text-base border-2">
-                Conhecer Especialidades
+              <Button size="lg" variant="outline" className="group">
+                <span className="group-hover:tracking-wide transition-all">Explorar Especialidades</span>
               </Button>
             </div>
             
@@ -53,21 +53,23 @@ const Hero = () => {
           </div>
           
           {/* Image */}
-          <div className="relative animate-slide-up">
-            <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-30 -z-10" />
-            <img 
-              src={heroImage} 
-              alt="Sorriso perfeito - Estética dental premium"
-              className="rounded-3xl shadow-strong w-full h-auto"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-medium">
+          <div className="relative animate-slide-up group">
+            <div className="absolute inset-0 bg-gradient-champagne rounded-3xl blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500 -z-10" />
+            <div className="overflow-hidden rounded-3xl shadow-strong hover:shadow-glow transition-all duration-500">
+              <img 
+                src={heroImage} 
+                alt="Sorriso perfeito - Estética dental premium"
+                className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-strong hover-lift animate-scale-in">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-premium flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-premium flex items-center justify-center animate-glow">
                   <Star className="w-6 h-6 text-white fill-white" />
                 </div>
                 <div>
-                  <p className="font-bold text-2xl text-foreground">98%</p>
-                  <p className="text-sm text-muted-foreground">Satisfação</p>
+                  <p className="font-bold text-3xl text-foreground">98%</p>
+                  <p className="text-sm text-muted-foreground font-medium">Índice de Excelência</p>
                 </div>
               </div>
             </div>

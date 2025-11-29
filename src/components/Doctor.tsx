@@ -9,63 +9,65 @@ const Doctor = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-accent rounded-3xl blur-3xl opacity-20 -z-10" />
-            <img 
-              src={doctorImage} 
-              alt="Dra. Ana Beatriz Silveira - Dentista especialista em estética"
-              className="rounded-3xl shadow-strong w-full h-auto"
-            />
+          <div className="relative group animate-slide-in-left">
+            <div className="absolute inset-0 bg-gradient-champagne rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
+            <div className="overflow-hidden rounded-3xl shadow-strong hover-lift">
+              <img 
+                src={doctorImage} 
+                alt="Dra. Ana Beatriz Silveira - Dentista especialista em estética"
+                className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
           </div>
           
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <p className="text-sm font-semibold text-accent uppercase tracking-wider">Especialista Principal</p>
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider">Liderança Clínica</p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
                 Dra. Ana Beatriz Silveira
               </h2>
-              <p className="text-xl text-primary font-medium">
-                Especialista em Prótese e Estética Dental
+              <p className="text-xl text-primary font-semibold">
+                Especialista em Reabilitação Estética e Prótese Dental
               </p>
             </div>
             
-            <p className="text-muted-foreground leading-relaxed">
-              Com mais de 15 anos dedicados à odontologia estética, a Dra. Ana Beatriz é referência em transformações de sorrisos através de técnicas minimamente invasivas. Sua abordagem combina excelência técnica com um olhar sensível para a naturalidade e harmonia facial.
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Expertise consolidada em transformações estéticas complexas através de protocolos minimamente invasivos. Formação internacional com foco em harmonia facial e biomimética dental.
             </p>
             
             <p className="text-muted-foreground leading-relaxed">
-              Acredita que cada sorriso conta uma história única, e por isso desenvolve tratamentos personalizados que respeitam a individualidade de cada paciente, sempre buscando resultados que vão além da estética — resultados que transformam vidas.
+              Pioneira em técnicas de planejamento digital integrado (DSD) e cimentação adesiva de alta performance. Filosofia de tratamento centrada na longevidade funcional e naturalidade estética.
             </p>
             
             <div className="space-y-4 pt-4">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4 group cursor-pointer hover-lift p-4 rounded-xl transition-all">
+                <div className="w-12 h-12 rounded-xl bg-gradient-champagne flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all">
+                  <GraduationCap className="w-6 h-6 text-graphite group-hover:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Formação Premium</h4>
-                  <p className="text-sm text-muted-foreground">Especialização em Estética Dental pela NYU College of Dentistry (USA) • Mestrado em Prótese Dentária pela USP • Certificação Internacional em Design de Sorriso Digital</p>
+                  <h4 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Formação de Elite</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Fellowship em Estética Dental pela NYU College of Dentistry (USA) • Mestrado em Reabilitação Oral pela USP • Certificação Internacional em Digital Smile Design</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4 group cursor-pointer hover-lift p-4 rounded-xl transition-all">
+                <div className="w-12 h-12 rounded-xl bg-gradient-champagne flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all">
+                  <Award className="w-6 h-6 text-graphite group-hover:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Reconhecimento</h4>
-                  <p className="text-sm text-muted-foreground">Membro da Academia Americana de Odontologia Estética • Palestrante internacional • Top Dentist Award 2023</p>
+                  <h4 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Reconhecimento Internacional</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Membro ativo da AAED (American Academy of Esthetic Dentistry) • Palestrante em congressos científicos • Top Dentist Award 2023</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4 group cursor-pointer hover-lift p-4 rounded-xl transition-all">
+                <div className="w-12 h-12 rounded-xl bg-gradient-champagne flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all">
+                  <Users className="w-6 h-6 text-graphite group-hover:scale-110 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Experiência</h4>
-                  <p className="text-sm text-muted-foreground">Mais de 2.000 sorrisos transformados • Especialista em casos complexos de reabilitação estética</p>
+                  <h4 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Experiência Clínica Avançada</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Mais de 2.000 casos de alta complexidade resolvidos • Especialização em reabilitação full-mouth e implantodontia estética</p>
                 </div>
               </div>
             </div>

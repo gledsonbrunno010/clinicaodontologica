@@ -49,12 +49,13 @@ const WhyChoose = () => {
           {reasons.map((reason, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl p-8 space-y-4 shadow-soft hover:shadow-medium transition-all duration-500"
+              className="bg-white rounded-2xl p-8 space-y-4 shadow-soft hover-lift group cursor-pointer border border-transparent hover:border-accent/20"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center">
-                <reason.icon className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-champagne flex items-center justify-center group-hover:shadow-glow transition-all duration-500">
+                <reason.icon className="w-8 h-8 text-graphite group-hover:scale-110 transition-transform" />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground">
+              <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                 {reason.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

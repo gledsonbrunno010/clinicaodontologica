@@ -8,32 +8,38 @@
 
 @layer base {
   :root {
-    /* Base Colors - Clean & Sophisticated */
+    /* Base Colors - Ultra Premium Palette */
     --background: 0 0% 100%;
-    --foreground: 220 20% 15%;
+    --foreground: 225 25% 12%;
 
     /* Card & Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 225 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 225 25% 12%;
 
-    /* Primary - Deep Petrol Blue (Premium & Medical) */
-    --primary: 195 65% 25%;
+    /* Primary - Deep Graphite (Clinical Luxury) */
+    --primary: 220 30% 20%;
     --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 30% 15%;
 
-    /* Secondary - Soft Warm Grey */
-    --secondary: 30 10% 96%;
-    --secondary-foreground: 220 20% 15%;
+    /* Secondary - Soft Off-White */
+    --secondary: 30 12% 98%;
+    --secondary-foreground: 225 25% 12%;
 
     /* Muted - Light Clinical Grey */
     --muted: 220 15% 97%;
-    --muted-foreground: 220 15% 45%;
+    --muted-foreground: 220 18% 42%;
 
-    /* Accent - Subtle Gold */
-    --accent: 42 78% 65%;
-    --accent-foreground: 220 20% 15%;
+    /* Accent - Champagne Gold */
+    --accent: 45 55% 68%;
+    --accent-foreground: 225 25% 12%;
+    --accent-glow: 45 70% 75%;
+
+    /* Graphite for depth */
+    --graphite: 220 25% 25%;
+    --graphite-light: 220 20% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -41,23 +47,27 @@
     /* Borders - Soft & Minimal */
     --border: 220 15% 92%;
     --input: 220 15% 92%;
-    --ring: 195 65% 25%;
+    --ring: 220 30% 20%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
     
-    /* Custom Premium Tokens */
-    --gradient-premium: linear-gradient(135deg, hsl(195 65% 25%) 0%, hsl(195 55% 35%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 15% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(42 78% 65% / 0.1) 0%, hsl(42 78% 75% / 0.05) 100%);
+    /* Premium Gradients */
+    --gradient-premium: linear-gradient(135deg, hsl(220 30% 20%) 0%, hsl(220 30% 28%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 15% 99%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 55% 68% / 0.08) 0%, hsl(45 70% 75% / 0.04) 100%);
+    --gradient-champagne: linear-gradient(135deg, hsl(45 55% 68% / 0.15) 0%, hsl(45 70% 80% / 0.05) 100%);
+    --gradient-graphite: linear-gradient(180deg, hsl(220 25% 25%) 0%, hsl(220 25% 18%) 100%);
     
-    /* Shadows - Elegant & Soft */
-    --shadow-soft: 0 4px 24px -2px hsl(220 20% 15% / 0.04);
-    --shadow-medium: 0 8px 40px -4px hsl(220 20% 15% / 0.08);
-    --shadow-strong: 0 16px 64px -8px hsl(220 20% 15% / 0.12);
+    /* Sophisticated Shadows */
+    --shadow-soft: 0 2px 16px -4px hsl(220 25% 12% / 0.04);
+    --shadow-medium: 0 8px 32px -6px hsl(220 25% 12% / 0.08);
+    --shadow-strong: 0 20px 60px -10px hsl(220 25% 12% / 0.14);
+    --shadow-glow: 0 0 32px -8px hsl(45 55% 68% / 0.25);
     
-    /* Transitions */
+    /* Premium Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-elegant: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -98,14 +108,60 @@
     text-wrap: balance;
   }
   
+  /* Premium Animation Classes */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
+    animation: slideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
   
+  .animate-slide-in-left {
+    animation: slideInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Scroll Reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -10px hsl(220 25% 12% / 0.18);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 0.4s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 32px -8px hsl(45 55% 68% / 0.35);
+  }
+  
+  /* Keyframes */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -118,11 +174,42 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px -8px hsl(45 55% 68% / 0.2);
+    }
+    to {
+      box-shadow: 0 0 40px -8px hsl(45 55% 68% / 0.4);
     }
   }
 }
