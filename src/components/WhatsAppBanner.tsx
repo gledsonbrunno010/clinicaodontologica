@@ -7,7 +7,7 @@ const WhatsAppBanner = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section className="relative py-8 bg-gradient-to-r from-primary to-primary-hover overflow-hidden">
+    <section className="relative pt-8 pb-2 bg-gradient-to-r from-primary to-primary-hover overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

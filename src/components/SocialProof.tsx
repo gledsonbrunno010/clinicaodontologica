@@ -31,17 +31,17 @@ const SocialProof = () => {
     ];
 
     return (
-        <section id="depoimentos" className="py-24 bg-secondary relative overflow-hidden">
+        <section id="depoimentos" className="pt-4 pb-24 bg-secondary relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 space-y-4 scroll-reveal">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 w-fit mx-auto">
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">Histórias Reais</span>
                     </div>
                     <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
-                        Depoimentos dos Clientes
+                        Depoimentos
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Provas Reais dos nossos clientes fiéis
+                        Comentários dos nossos clientes
                     </p>
                 </div>
 
