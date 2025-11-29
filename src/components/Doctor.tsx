@@ -3,7 +3,7 @@ import doctorImage from "@/assets/dentist-portrait.jpg";
 
 const Doctor = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="doutora" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-soft -z-10" />
       
       <div className="container mx-auto px-4">

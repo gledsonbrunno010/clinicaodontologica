@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +41,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className="flex items-center gap-2 group cursor-pointer" onClick={() => navigate('/')}>
             <div className="w-10 h-10 rounded-xl bg-gradient-premium flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
               <span className="text-white font-serif font-bold text-xl">E</span>
             </div>
@@ -53,16 +55,34 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {['Sobre', 'Especialidades', 'Depoimentos'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
-              >
-                <span>{item}</span>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-              </button>
-            ))}
+            <button
+              onClick={() => scrollToSection('doutora')}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+            >
+              <span>Sobre</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+            </button>
+            <button
+              onClick={() => scrollToSection('especialidades')}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+            >
+              <span>Especialidades</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+            </button>
+            <button
+              onClick={() => navigate('/trabalhos')}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+            >
+              <span>Trabalhos</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+            </button>
+            <button
+              onClick={() => scrollToSection('depoimentos')}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group"
+            >
+              <span>Depoimentos</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+            </button>
             <Button variant="premium" size="lg" className="group shadow-medium hover:shadow-glow transition-all duration-300">
               <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
               Agendar Consulta
@@ -82,15 +102,30 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-border shadow-lg animate-fade-in">
             <div className="flex flex-col p-4 space-y-4">
-              {['Sobre', 'Especialidades', 'Depoimentos'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-left text-sm font-medium text-foreground hover:text-primary py-2"
-                >
-                  {item}
-                </button>
-              ))}
+              <button
+                onClick={() => scrollToSection('doutora')}
+                className="text-left text-sm font-medium text-foreground hover:text-primary py-2"
+              >
+                Sobre
+              </button>
+              <button
+                onClick={() => scrollToSection('especialidades')}
+                className="text-left text-sm font-medium text-foreground hover:text-primary py-2"
+              >
+                Especialidades
+              </button>
+              <button
+                onClick={() => navigate('/trabalhos')}
+                className="text-left text-sm font-medium text-foreground hover:text-primary py-2"
+              >
+                Trabalhos
+              </button>
+              <button
+                onClick={() => scrollToSection('depoimentos')}
+                className="text-left text-sm font-medium text-foreground hover:text-primary py-2"
+              >
+                Depoimentos
+              </button>
               <Button variant="premium" className="w-full justify-center">
                 <Phone className="w-4 h-4 mr-2" />
                 Agendar Consulta
