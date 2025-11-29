@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 
 import SEO from "@/components/SEO";
 
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
+
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -23,6 +25,7 @@ const Index = () => {
         <About />
         <WhatsAppBanner />
         <Specialties />
+        <BeforeAfterShowcase />
         <WhyChoose />
         <Process />
         <SocialProof />
