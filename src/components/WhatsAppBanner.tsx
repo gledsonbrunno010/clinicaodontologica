@@ -7,7 +7,7 @@ const WhatsAppBanner = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <section className="relative py-16 bg-gradient-to-r from-primary to-primary-hover overflow-hidden">
+    <section className="relative py-8 bg-gradient-to-r from-primary to-primary-hover overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -28,7 +28,7 @@ const WhatsAppBanner = () => {
           </h2>
 
           <p className="text-lg text-white/90 max-w-2xl mx-auto animate-fade-in">
-            Transforme seu sorriso com planejamento digital 3D e tecnologia de ponta. 
+            Transforme seu sorriso com planejamento digital 3D e tecnologia de ponta.
             Nossa equipe está pronta para criar o tratamento perfeito para você.
           </p>
 

@@ -31,7 +31,7 @@ const Specialties = () => {
   ];
 
   return (
-    <section id="especialidades" className="py-24 bg-gradient-soft relative overflow-hidden">
+    <section id="especialidades" className="pt-8 pb-24 bg-gradient-soft relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-champagne rounded-full blur-3xl opacity-20 -z-10" />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4 scroll-reveal">
@@ -51,17 +51,17 @@ const Specialties = () => {
           {specialties.map((specialty, index) => (
             <Card
               key={index}
-              className="glass-card border-2 hover-lift group cursor-pointer overflow-hidden"
+              className="glass-card border-2 border-accent/30 shadow-glow group cursor-pointer overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 space-y-6 relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-champagne rounded-full blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-champagne rounded-full blur-2xl opacity-30" />
                 <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-premium flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-500">
-                    <specialty.icon className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-premium flex items-center justify-center flex-shrink-0 shadow-glow">
+                    <specialty.icon className="w-7 h-7 text-white scale-110" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="font-serif text-2xl font-semibold text-primary mb-3">
                       {specialty.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-6">
@@ -70,14 +70,14 @@ const Specialties = () => {
                     <div className="grid grid-cols-2 gap-3">
                       {specialty.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent group-hover:scale-150 transition-transform" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent scale-150" />
                           <span className="text-sm text-foreground font-medium">{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
+                <div className="absolute bottom-4 right-4 opacity-100 transform translate-x-0">
                   <ArrowRight className="w-5 h-5 text-primary" />
                 </div>
               </CardContent>

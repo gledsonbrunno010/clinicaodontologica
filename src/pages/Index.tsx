@@ -22,10 +22,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <About />
+        <BeforeAfterShowcase />
         <WhatsAppBanner />
         <Specialties />
-        <BeforeAfterShowcase />
         <WhyChoose />
         <Process />
         <SocialProof />
