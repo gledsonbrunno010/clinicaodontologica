@@ -35,8 +35,7 @@ const WhatsAppBanner = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-scale-in">
             <Button
               size="lg"
-              variant="champagne"
-              className="group shadow-strong hover:shadow-glow w-full sm:w-auto"
+              className="group shadow-strong hover:shadow-glow w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 border-none"
               onClick={() => window.open(whatsappUrl, '_blank')}
             >
               <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />

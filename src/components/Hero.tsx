@@ -25,16 +25,28 @@ const Hero = () => {
               <span className="text-sm font-medium text-foreground">Excelência em Odontologia Estética</span>
             </div>
 
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight text-balance">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight text-balance text-center md:text-left">
               Seu sorriso renovado com{" "}
               <span className="bg-gradient-to-r from-primary to-graphite bg-clip-text text-transparent">sofisticação e precisão</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+            {/* Mobile Image */}
+            <div className="relative group md:hidden my-8">
+              <div className="absolute inset-0 bg-gradient-champagne rounded-3xl blur-3xl opacity-40 -z-10" />
+              <div className="overflow-hidden rounded-3xl shadow-strong relative z-10">
+                <img
+                  src={heroImage}
+                  alt="Sorriso perfeito - Estética dental premium"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
               Transforme sua autoestima com tratamentos odontológicos de alto padrão. Tecnologia avançada e atendimento personalizado para um resultado natural e duradouro.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:justify-center md:justify-start">
               <Button size="lg" variant="premium" className="group shadow-strong hover:shadow-glow transition-all duration-300">
                 <Phone className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Agendar Avaliação Premium
